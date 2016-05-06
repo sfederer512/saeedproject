@@ -1,0 +1,27 @@
+{
+    "BMW" : {
+        "ID":"1",
+        "name" : "MW i8",
+        "color":"blue",
+        "cost" : "100$ per day"
+    },
+    "Mercedes" : {
+        "ID":"2",
+        "name" : "CLA",
+        "color":"white",
+        "cost" : "150$ per day"
+    },
+    "lamborghini" : {
+        "ID":"3",
+        "name" : "aventador",
+        "color":"red",
+        "cost" : "350$ per day"
+    },
+    "Ferrari" : {
+        "ID":"4",
+        "name" : "488 GTB",
+        "color":"blue",
+        "cost" : "500$ per day"
+    }
+    
+}

@@ -1,0 +1,42 @@
+{
+    
+    "hotels":[
+        {
+    "hotelid": "1",
+    "hotelname":"bhhhh",
+    "hotelprise":"49"
+
+
+
+
+},
+{
+
+  "hotelid": "2",
+    "hotelname":"shiraton",
+    "hotelprise":"30"
+
+
+
+
+
+},
+{
+
+
+  "hotelid": "3",
+    "hotelname":"fex",
+    "hotelprise":"20"
+
+
+
+
+}
+    ]
+    
+    
+    
+    
+    
+    
+    }
