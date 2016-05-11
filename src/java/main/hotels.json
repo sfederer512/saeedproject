@@ -1,0 +1,20 @@
+{
+    "hotel1" : {
+        "name":"best eastern",
+        "ID":"1",
+        "cost":"200$ per night",
+        "location":"Ramallah, Irsal str."
+    },
+    "hotel2" : {
+        "name":"Grand park",
+        "ID":"2",
+        "cost":"300$ per night",
+        "location":"Ramallah, masioon."
+    },
+    "hotel3" : {
+        "name":"Movin pick",
+        "ID":"3",
+        "cost":"250$ per night",
+        "location":"Ramallah, manara"
+    }
+}

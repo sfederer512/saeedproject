@@ -1,0 +1,27 @@
+{
+    "car1" : {
+        "ID":"1",
+        "name" : "BMW MW i8",
+        "color":"blue",
+        "cost" : "100$ per day"
+    },
+    "car2" : {
+        "ID":"2",
+        "name" : "Mercedes CLA",
+        "color":"white",
+        "cost" : "150$ per day"
+    },
+    "car3" : {
+        "ID":"3",
+        "name" : "lamborghini aventador",
+        "color":"red",
+        "cost" : "350$ per day"
+    },
+    "car4" : {
+        "ID":"4",
+        "name" : "Ferrari 488 GTB",
+        "color":"blue",
+        "cost" : "500$ per day"
+    }
+    
+}
