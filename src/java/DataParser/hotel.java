@@ -1,10 +1,10 @@
-package main;
+package DataParser;
 
 public class hotel {
     String name;
-    String ID;
+    int ID;
     String location;
-    String cost;
+    double cost;
     public hotel(){
     }
     public void setName(String n){
@@ -15,27 +15,32 @@ public class hotel {
         return this.name;
     }
     
-    public void setID(String id){
+    public void setID(int id){
         this.ID = id;
     }
     
-    public String getID(){
+    public int getID(){
         return this.ID;
     }
     
     public void setLocation(String l){
         this.location = l;
     }
+
+    @Override
+    public String toString() {
+        return "hotel{" + "name=" + name + ", ID=" + ID + ", location=" + location + ", cost=" + cost + '}';
+    }
     
     public String getLocation(){
         return this.location;
     }
     
-    public void setCost(String c){
+    public void setCost(double c){
         this.cost = c;
     }
     
-    public String getCost(){
+    public double getCost(){
         return this.cost;
     }
 }

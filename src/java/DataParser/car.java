@@ -1,10 +1,10 @@
-package main;
+package DataParser;
 
 public class car {
     String name;
-    String ID;
+    int ID;
     String color;
-    String cost;
+    double cost;
     public car(){
     }
     
@@ -16,11 +16,11 @@ public class car {
         return this.name;
     }
     
-    public void setID(String id){
+    public void setID(int id){
         this.ID = id;
     }
     
-    public String getID(){
+    public int getID(){
         return this.ID;
     }
     
@@ -32,11 +32,11 @@ public class car {
         return this.color;
     }
     
-    public void setCost(String c){
+    public void setCost(double c){
         this.cost = c;
     }
     
-    public String getCost(){
+    public double getCost(){
         return this.cost;
     }
 }
