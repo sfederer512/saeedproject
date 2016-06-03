@@ -19,6 +19,11 @@ public class car {
     public void setID(int id){
         this.ID = id;
     }
+
+    @Override
+    public String toString() {
+        return "car{" + "name=" + name +"."+ ", ID=" + ID +"."+ ", color=" + color +"."+ ", cost=" + cost +"."+ '}';
+    }
     
     public int getID(){
         return this.ID;

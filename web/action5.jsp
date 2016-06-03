@@ -1,6 +1,6 @@
 <%-- 
-    Document   : action1
-    Created on : Jun 3, 2016, 7:47:34 PM
+    Document   : action5
+    Created on : Jun 3, 2016, 9:30:35 PM
     Author     : saeed
 --%>
 
@@ -12,26 +12,27 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello Welcome To Show Cars!</h1>
+        <h1>Hello World!</h1>
+        
     <%-- start web service invocation --%><hr/>
     <%
+        
+        String a=request.getParameter("getname");
+                  String b=request.getParameter("getname2");
+
     try {
 	webservice.Hotels_Service service = new webservice.Hotels_Service();
 	webservice.Hotels port = service.getHotelsPort();
+	 // TODO initialize WS operation arguments here
+	java.lang.String name = a;
+	java.lang.String hotel = b;
 	// TODO process result here
-	java.lang.String result = port.showCars();
-	out.println("List Of Cars = "+result);
+	java.lang.String result = port.bookcar(name, hotel);
+	out.println("Result = "+result);
     } catch (Exception ex) {
 	// TODO handle custom exceptions here
     }
     %>
     <%-- end web service invocation --%><hr/>
-    
-    
-      <form action="action5.jsp" method="post">
-          Enter Your Name:  <input type="text" name="getname" ><br>
-          Enter Car Name From List: <input type="text" name="getname2" ><br>
-
-        <input type="submit" value="reservation"></form>
     </body>
 </html>

@@ -29,7 +29,7 @@ public class hotel {
 
     @Override
     public String toString() {
-        return "hotel{" + "name=" + name + ", ID=" + ID + ", location=" + location + ", cost=" + cost + '}';
+        return "hotel{" + "name=" + name +"."+ ", ID=" + ID +"."+ ", location=" + location +"."+ ", cost=" + cost + '}';
     }
     
     public String getLocation(){

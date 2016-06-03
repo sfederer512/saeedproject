@@ -14,11 +14,11 @@
         <input type="submit" value="show Cars"></form>
         
          <form action="action2.jsp" method="post">
-             <input type="text" name="getid" >
+           Enter Car ID For Detail  <input type="text" name="getid" >
         <input type="submit" value="Get Car"></form>
         
           <form action="action3.jsp" method="post">
-             <input type="text" name="getid" >
+           Enter Hotel ID For Detail  <input type="text" name="getid" >
         <input type="submit" value="Get Hotel"></form>
     </body>
     

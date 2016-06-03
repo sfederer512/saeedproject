@@ -13,6 +13,10 @@
     </head>
     <body>
         <h1>Hello Welcome To Show Hotels!</h1>
+        
+        
+        
+        
     <%-- start web service invocation --%><hr/>
     <%
     try {
@@ -26,5 +30,13 @@
     }
     %>
     <%-- end web service invocation --%><hr/>
+    
+    
+    
+         <form action="action4.jsp" method="post">
+             Enter Your Name:            <input type="text" name="getname" ><br>
+             Enter Hotel Name From List: <input type="text" name="getname2" ><br>
+
+        <input type="submit" value="reservation"></form>
     </body>
 </html>

@@ -10,6 +10,7 @@ import DataParser.hotel;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import javax.jws.WebService;
@@ -201,7 +202,7 @@ test1.setName(carsObject.getString("name"));
                 String col = m.getLocation();
                            double c = m.getCost();
 
-                   q+="ID="+idd+"."+"\n"+"name="+name+"."+"\n"+"Cost="+c+"."+"\n"+"Location"+col;
+                   q+=m.toString();
 
     
             
@@ -231,8 +232,49 @@ test1.setName(carsObject.getString("name"));
                                       double c = m.getCost();
 
                 String col = m.getColor();
-                   q+="ID="+idd+"."+"\n"+"name="+name+"."+"\n"+"Cost="+c+"."+"\n"+"Color"+col;
+                   q+=m.toString();
                    
                    return q;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "bookhotel")
+    public String bookhotel(@WebParam(name = "name") String name, @WebParam(name = "hotel") String hotel) throws IOException {
+ try {
+             parsing();
+         } 
+          catch (org.json.JSONException ex) {
+         java.util.logging.Logger.getLogger(Hotels.class.getName()).log(Level.SEVERE, null, ex);
+     }      
+        
+      
+    hotel result = null;
+    for (hotel c : hotels) {
+        if (hotel.equals(c.getName())) {
+            result = c;
+            break;
+        }
+    }        return "Sucsseful reservation \n"+"'"+name+"''"+"\n"+result.toString();
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "bookcar")
+    public String bookcar(@WebParam(name = "name") String name, @WebParam(name = "hotel") String car) throws IOException {
+ try {
+             parsing();
+         } 
+          catch (org.json.JSONException ex) {
+         java.util.logging.Logger.getLogger(Hotels.class.getName()).log(Level.SEVERE, null, ex);
+     }      
+car result = null;
+    for (car c : cars) {
+        if (car.equals(c.getName())) {
+            result = c;
+            break;
+        }
+    }        return "Sucsseful reservation \n"+"'"+name+"''"+"\n"+result.toString();    }
 }

@@ -2,6 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/webserviceProject/parser?wsdl" uri="src/conf/xml-resources/web-service-references/parser_1/wsdl/localhost_8080/webserviceProject/parser.wsdl"/>
     <system systemId="http://localhost:8080/webserviceProject/parser?xsd=1" uri="src/conf/xml-resources/web-service-references/parser_1/wsdl/localhost_8080/webserviceProject/parser.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/webserviceProject/Hotels?wsdl" uri="src/conf/xml-resources/web-service-references/Hotels/wsdl/localhost_8080/webserviceProject/Hotels.wsdl"/>
-    <system systemId="http://localhost:8080/webserviceProject/Hotels?xsd=1" uri="src/conf/xml-resources/web-service-references/Hotels/wsdl/localhost_8080/webserviceProject/Hotels.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/webserviceProject/Hotels?wsdl" uri="src/conf/xml-resources/web-service-references/Hotels_1/wsdl/localhost_8080/webserviceProject/Hotels.wsdl"/>
+    <system systemId="http://localhost:8080/webserviceProject/Hotels?xsd=1" uri="src/conf/xml-resources/web-service-references/Hotels_1/wsdl/localhost_8080/webserviceProject/Hotels.xsd_1.xsd"/>
 </catalog>
