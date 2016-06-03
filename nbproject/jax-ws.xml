@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="parser">
-      <implementation-class>main.parser</implementation-class>
+    <service name="Hotels">
+      <implementation-class>WebService.Hotels</implementation-class>
     </service>
   </services>
   <clients>
-    <client name="parser">
-      <wsdl-url>http://localhost:8080/webserviceProject/parser?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/webserviceProject/parser.wsdl</local-wsdl-file>
-      <package-name>main</package-name>
+    <client name="Hotels">
+      <wsdl-url>http://localhost:8080/webserviceProject/Hotels?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/webserviceProject/Hotels.wsdl</local-wsdl-file>
+      <package-name>webservice</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -26,39 +26,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/webserviceProject/parser?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
-    <client name="parser_1">
-      <wsdl-url>http://localhost:8080/webserviceProject/parser?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/webserviceProject/parser.wsdl</local-wsdl-file>
-      <package-name>main</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>fork</wsimport-option-name>
-          <wsimport-option-value>false</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/webserviceProject/parser?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/webserviceProject/Hotels?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

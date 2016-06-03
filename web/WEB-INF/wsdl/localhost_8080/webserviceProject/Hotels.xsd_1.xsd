@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://WebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WebService/">
+
+<xs:element name="FindCar" type="tns:FindCar"/>
+
+<xs:element name="FindCarResponse" type="tns:FindCarResponse"/>
+
+<xs:element name="FindHotel" type="tns:FindHotel"/>
+
+<xs:element name="FindHotelResponse" type="tns:FindHotelResponse"/>
+
+<xs:element name="IOException" type="tns:IOException"/>
+
+<xs:element name="JSONException" type="tns:JSONException"/>
+
+<xs:element name="ShowCars" type="tns:ShowCars"/>
+
+<xs:element name="ShowCarsResponse" type="tns:ShowCarsResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="parsing" type="tns:parsing"/>
+
+<xs:element name="parsingResponse" type="tns:parsingResponse"/>
+
+<xs:element name="showHotels" type="tns:showHotels"/>
+
+<xs:element name="showHotelsResponse" type="tns:showHotelsResponse"/>
+
+<xs:complexType name="ShowCars">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ShowCarsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IOException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="JSONException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="parsing">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="parsingResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="showHotels">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="showHotelsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindHotel">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindHotelResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindCar">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindCarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

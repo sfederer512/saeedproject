@@ -13,26 +13,14 @@
       <xsd:import namespace="http://main/" schemaLocation="Parser_schema1.xsd"/>
     </xsd:schema>
   </types>
-  <message name="findhotels">
-    <part name="parameters" element="tns:findhotels"/>
-  </message>
-  <message name="findhotelsResponse">
-    <part name="parameters" element="tns:findhotelsResponse"/>
-  </message>
-  <message name="IOException">
-    <part name="fault" element="tns:IOException"/>
-  </message>
-  <message name="findscar">
-    <part name="parameters" element="tns:findscar"/>
-  </message>
-  <message name="findscarResponse">
-    <part name="parameters" element="tns:findscarResponse"/>
-  </message>
   <message name="showhotels">
     <part name="parameters" element="tns:showhotels"/>
   </message>
   <message name="showhotelsResponse">
     <part name="parameters" element="tns:showhotelsResponse"/>
+  </message>
+  <message name="IOException">
+    <part name="fault" element="tns:IOException"/>
   </message>
   <message name="showcars">
     <part name="parameters" element="tns:showcars"/>
@@ -49,17 +37,19 @@
   <message name="JSONException">
     <part name="fault" element="tns:JSONException"/>
   </message>
+  <message name="findhotels">
+    <part name="parameters" element="tns:findhotels"/>
+  </message>
+  <message name="findhotelsResponse">
+    <part name="parameters" element="tns:findhotelsResponse"/>
+  </message>
+  <message name="findscar">
+    <part name="parameters" element="tns:findscar"/>
+  </message>
+  <message name="findscarResponse">
+    <part name="parameters" element="tns:findscarResponse"/>
+  </message>
   <portType name="parser">
-    <operation name="findhotels">
-      <input wsam:Action="http://main/parser/findhotelsRequest" message="tns:findhotels"/>
-      <output wsam:Action="http://main/parser/findhotelsResponse" message="tns:findhotelsResponse"/>
-      <fault message="tns:IOException" name="IOException" wsam:Action="http://main/parser/findhotels/Fault/IOException"/>
-    </operation>
-    <operation name="findscar">
-      <input wsam:Action="http://main/parser/findscarRequest" message="tns:findscar"/>
-      <output wsam:Action="http://main/parser/findscarResponse" message="tns:findscarResponse"/>
-      <fault message="tns:IOException" name="IOException" wsam:Action="http://main/parser/findscar/Fault/IOException"/>
-    </operation>
     <operation name="showhotels">
       <input wsam:Action="http://main/parser/showhotelsRequest" message="tns:showhotels"/>
       <output wsam:Action="http://main/parser/showhotelsResponse" message="tns:showhotelsResponse"/>
@@ -76,34 +66,20 @@
       <fault message="tns:JSONException" name="JSONException" wsam:Action="http://main/parser/parsing/Fault/JSONException"/>
       <fault message="tns:IOException" name="IOException" wsam:Action="http://main/parser/parsing/Fault/IOException"/>
     </operation>
+    <operation name="findhotels">
+      <input wsam:Action="http://main/parser/findhotelsRequest" message="tns:findhotels"/>
+      <output wsam:Action="http://main/parser/findhotelsResponse" message="tns:findhotelsResponse"/>
+      <fault message="tns:IOException" name="IOException" wsam:Action="http://main/parser/findhotels/Fault/IOException"/>
+    </operation>
+    <operation name="findscar">
+      <input wsam:Action="http://main/parser/findscarRequest" message="tns:findscar"/>
+      <output wsam:Action="http://main/parser/findscarResponse" message="tns:findscarResponse"/>
+      <fault message="tns:IOException" name="IOException" wsam:Action="http://main/parser/findscar/Fault/IOException"/>
+    </operation>
   </portType>
   <binding name="parserPortBinding" type="tns:parser">
     <wsp:PolicyReference URI="#parserPortBindingPolicy"/>
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-    <operation name="findhotels">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="IOException">
-        <soap:fault name="IOException" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="findscar">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="IOException">
-        <soap:fault name="IOException" use="literal"/>
-      </fault>
-    </operation>
     <operation name="showhotels">
       <soap:operation soapAction=""/>
       <input>
@@ -139,6 +115,30 @@
       <fault name="JSONException">
         <soap:fault name="JSONException" use="literal"/>
       </fault>
+      <fault name="IOException">
+        <soap:fault name="IOException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="findhotels">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="IOException">
+        <soap:fault name="IOException" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="findscar">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
       <fault name="IOException">
         <soap:fault name="IOException" use="literal"/>
       </fault>

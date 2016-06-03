@@ -19,11 +19,11 @@
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsgen-parser" depends="wsgen-init">
+    <target name="wsgen-Hotels" depends="wsgen-init">
         <copy todir="${build.classes.dir}/META-INF">
-            <fileset dir="${webinf.dir}" includes="wsit-main.parser.xml"/>
+            <fileset dir="${webinf.dir}" includes="wsit-WebService.Hotels.xml"/>
         </copy>
-        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="main.parser" xendorsed="true">
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="WebService.Hotels" xendorsed="true">
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>
@@ -43,37 +43,21 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-parser" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/parser"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/parser" destdir="${build.generated.dir}/jax-wsCache/parser" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/parser/wsdl/localhost_8080/webserviceProject/parser.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/webserviceProject/parser?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/parser/wsdl/localhost_8080/webserviceProject/parser.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/parser"/>
+    <target name="wsimport-client-Hotels" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Hotels"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Hotels" destdir="${build.generated.dir}/jax-wsCache/Hotels" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Hotels/wsdl/localhost_8080/webserviceProject/Hotels.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/webserviceProject/Hotels?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Hotels/wsdl/localhost_8080/webserviceProject/Hotels.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Hotels"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/parser">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Hotels">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-parser" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/main"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/parser"/>
+    <target name="wsimport-client-clean-Hotels" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/webservice"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Hotels"/>
     </target>
-    <target name="wsimport-client-parser_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/parser_1"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/parser_1" destdir="${build.generated.dir}/jax-wsCache/parser_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/parser_1/wsdl/localhost_8080/webserviceProject/parser.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/webserviceProject/parser?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/parser_1/wsdl/localhost_8080/webserviceProject/parser.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/parser_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/parser_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-parser_1" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/main"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/parser_1"/>
-    </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-parser, wsimport-client-parser_1"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-Hotels"/>
 </project>
